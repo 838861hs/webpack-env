@@ -4,5 +4,9 @@
   "main": "index.js",
   "repository": "https://github.com/838861hs/webpack-env.git",
   "author": "838861hs <philoaki0@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
 }

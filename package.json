@@ -1,0 +1,8 @@
+{
+  "name": "webpack-env",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/838861hs/webpack-env.git",
+  "author": "838861hs <philoaki0@gmail.com>",
+  "license": "MIT"
+}

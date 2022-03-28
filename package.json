@@ -1,6 +1,6 @@
 {
   "name": "webpack-env",
-  "version": "1.0.0",
+  "version": "1.22.1",
   "main": "index.js",
   "repository": "https://github.com/838861hs/webpack-env.git",
   "author": "838861hs <philoaki0@gmail.com>",
@@ -8,5 +8,8 @@
   "devDependencies": {
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2"
+  },
+  "volta": {
+    "node": "16.14.2"
   }
 }

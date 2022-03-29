@@ -5,7 +5,11 @@
   "repository": "https://github.com/838861hs/webpack-env.git",
   "author": "838861hs <philoaki0@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
   "devDependencies": {
+    "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2",

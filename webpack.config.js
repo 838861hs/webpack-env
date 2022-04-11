@@ -1,10 +1,14 @@
+const webpack = require("webpack");
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
 
 module.exports = {
   mode: "development",
-  entry: path.join(__dirname, "/src", "index.js"),
+  entry: {
+    javascript: path.join(__dirname, "/src", "index.js"),
+  },
   devServer: {
     watchFiles: ["src/*", "dist"],
     hot: true,
@@ -24,6 +28,11 @@ module.exports = {
         test: /\.html$/,
         loader: "html-loader",
       },
+      // sassのコンパイル設定
+      {
+        test: /\.(sa|sc|c)ss$/i, // 対象にするファイルを指定
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+      },
     ],
   },
   plugins: [
@@ -33,5 +42,8 @@ module.exports = {
       template: path.join(__dirname, "./src", "index.html"),
     }),
     new HtmlWebpackHarddiskPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "style.css",
+    }),
   ],
 };
